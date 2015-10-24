@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-uncss",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Laravel Elixir wrapper around uncss Gulp task.",
   "main": "index.js",
   "scripts": {
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/hosmelq/laravel-elixir-uncss/issues"
   },
-  "homepage": "https://github.com/hosmelq/laravel-elixir-uncss#readme"
+  "homepage": "https://github.com/hosmelq/laravel-elixir-uncss#readme",
+  "dependencies": {
+    "gulp-uncss": "^1.0.4"
+  }
 }
