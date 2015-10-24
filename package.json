@@ -1,0 +1,25 @@
+{
+  "name": "laravel-elixir-uncss",
+  "version": "1.0.0",
+  "description": "Laravel Elixir wrapper around uncss Gulp task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hosmelq/laravel-elixir-uncss.git"
+  },
+  "keywords": [
+    "laravel",
+    "elixir",
+    "gulp",
+    "uncss"
+  ],
+  "author": "Hosmel Quintana <hosmelq@gmail.com> (http://hosmelq.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hosmelq/laravel-elixir-uncss/issues"
+  },
+  "homepage": "https://github.com/hosmelq/laravel-elixir-uncss#readme"
+}
