@@ -1,6 +1,6 @@
 {
   "name": "laravel-elixir-uncss",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Laravel Elixir wrapper around uncss Gulp task.",
   "main": "index.js",
   "scripts": {

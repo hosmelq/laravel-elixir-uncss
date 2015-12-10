@@ -10,6 +10,8 @@ Elixir.extend('uncss', function(styles, options, output, baseDir) {
     var paths = prepGulpPaths(styles, baseDir, output);
 
     new Task('uncss', function() {
+        this.log(paths.src, paths.output);
+
         return gulp.src(paths.src.path)
             .pipe(uncss(options || {}))
             .pipe($.if(config.production, $.minifyCss()))
