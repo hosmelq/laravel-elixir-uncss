@@ -14,7 +14,7 @@ Elixir.extend('uncss', function(styles, options, output, baseDir) {
 
         return gulp.src(paths.src.path)
             .pipe(uncss(options || {}))
-            .pipe($.if(config.production, $.minifyCss()))
+            .pipe($.if(config.production, $.cssnano()))
             .pipe(gulp.dest(paths.output.baseDir));
     });
 });
