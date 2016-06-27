@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/hosmelq/laravel-elixir-uncss#readme",
   "dependencies": {
-    "gulp-uncss": "^1.0.4"
+    "gulp-cssnano": "^2.1.2",
+    "gulp-uncss": "^1.0.5"
   }
 }

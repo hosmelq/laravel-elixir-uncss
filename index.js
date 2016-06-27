@@ -1,20 +1,19 @@
 var gulp = require('gulp');
+var cssnano = require('gulp-cssnano');
 var Elixir = require('laravel-elixir');
 var uncss = require('gulp-uncss');
-var $ = Elixir.Plugins;
+
 var config = Elixir.config;
-var GulpPaths = Elixir.GulpPaths;
-var Task = Elixir.Task;
 
 Elixir.extend('uncss', function(styles, options, output, baseDir) {
     var paths = prepGulpPaths(styles, baseDir, output);
 
-    new Task('uncss', function() {
+    new Elixir.Task('uncss', function() {
         this.log(paths.src, paths.output);
 
         return gulp.src(paths.src.path)
             .pipe(uncss(options || {}))
-            .pipe($.if(config.production, $.cssnano()))
+            .pipe(Elixir.Plugins.if(config.production, cssnano()))
             .pipe(gulp.dest(paths.output.baseDir));
     });
 });
@@ -27,7 +26,7 @@ Elixir.extend('uncss', function(styles, options, output, baseDir) {
  * @return {object}
  */
 var prepGulpPaths = function(src, baseDir, output) {
-    return new GulpPaths()
+    return new Elixir.GulpPaths()
         .src(src, baseDir || config.get('assets.css.folder'))
         .output(output || config.get('public.css.outputFolder'), 'all.css');
 };
